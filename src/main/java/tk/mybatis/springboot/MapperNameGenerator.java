@@ -9,6 +9,13 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanNameGenerator;
 import org.springframework.util.ClassUtils;
 
+/**
+ * 用来修改bean的名字生成规则， 修改默认的名字生成规则， 让它们生成的名字不再重复。</br>
+ * 原来的生成规则是小驼峰；修改之后的生成规则是小驼峰加序号
+ * 
+ * @author Administrator
+ *
+ */
 public class MapperNameGenerator implements BeanNameGenerator {
 	private Map<String, Integer> nameMap = new HashMap<>();
 
