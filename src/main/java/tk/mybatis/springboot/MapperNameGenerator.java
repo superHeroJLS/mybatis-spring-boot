@@ -27,6 +27,7 @@ public class MapperNameGenerator implements BeanNameGenerator {
 			int index = nameMap.get(beanName) + 1;
 			nameMap.put(beanName, index);
 			
+			// 如果名称已经存在，则将名称修改为beanName+index，后缀带上序号，防止名称重复。
 			beanName += index;
 		} else {
 			nameMap.put(beanName, 1);
